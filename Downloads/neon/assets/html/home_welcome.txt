@@ -1,0 +1,7 @@
+<div class = "hero-block-inner mbc-bg-color">
+  <h1 class = "row main-title text-center mbc-bg-color">Drupal Neon</h1>
+  <div class = "row main-desc text-center mbc-bg-color">Best creativity with professionally developed theme.<br> As light as neon gas. The noble theme</div>
+  <div class = "row main-cta-wrap text-center">
+    <a href = "#" class = "btn btn-lg mbc-base-bg mbc-base-border mbc-bg-color raised">Know More</a>&nbsp; &nbsp;<a href = "#" class = "btn btn-lg mbc-base-border mbc-base-color raised">Signup </a>
+  </div>
+</div>

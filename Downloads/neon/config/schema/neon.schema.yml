@@ -1,0 +1,6 @@
+# Schema for the configuration files of the Neon theme.
+
+neon.settings:
+  type: theme_settings
+  label: Neon settings
+

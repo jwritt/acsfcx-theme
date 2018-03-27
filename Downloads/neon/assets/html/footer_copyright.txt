@@ -1,0 +1,3 @@
+      <div class = "block-content footer-copyright-content">
+        © 2015  CMS Bots
+      </div>

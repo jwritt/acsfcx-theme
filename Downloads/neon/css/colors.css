@@ -1,0 +1,294 @@
+.mbc-trans-bg,
+.mbc-fac-trans-bg * {
+  background-color: transparent !important;
+}
+
+.mbc-base-color,
+a {
+  color: #7693fd;
+}
+.mbc-base-bg,
+header#navbar ul,
+header#navbar ul li,
+header#navbar ul li:hover,
+header#navbar ul li a,
+header#navbar ul li a:hover,
+header#navbar ul li a:hover {
+  background-color: #7693fd !important;
+}
+.mbc-base-border,
+.region-home-about section.block {
+  border-color: #7693fd;
+}
+.mbc-base-border-left {
+  border-left-color: #7693fd;
+}
+.mbc-base-border-right {
+  border-right-color: #7693fd;
+}
+.mbc-base-border-top {
+  border-top-color: #7693fd;
+}
+.mbc-base-border-bottom {
+  border-bottom-color: #7693fd;
+}
+.mbc-base-outline-color {
+  outline-color: #7693fd;
+}
+.mbc-base-column-rule-color {
+  -webkit-column-rule-color: #7693fd;
+  -moz-column-rule-color: #7693fd;
+  column-rule-color: #7693fd;
+}
+
+
+.mbc-link-color {
+  color: #8da4f5;
+}
+.region-sidebar-first ul.menu li a,
+.region-sidebar-second ul.menu li a {
+  color: #8da4f5 !important;
+}
+.mbc-link-bg,
+.region-bottom-tabbed ul.nav-stacked li.active,
+.home_topcarousel-container .carousel-indicators li,
+.region-bottom-tabbed ul.nav-stacked li.active a,
+ol.breadcrumb,
+.input-group-addon,
+.region-sidebar-second h2.block-title,
+.region-sidebar-first h2.block-title,
+.neon-homepage-nodes ul.meta-info,
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+  background-color: #8da4f5;
+}
+.pager__item.active a {
+  background-color: #8da4f5 !important;
+}
+
+.mbc-link-border {
+  border-color: #8da4f5;
+}
+
+.fieldset,
+.img-thumbnail,
+.table-bordered,
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus ,
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus,
+.nav-tabs-justified > .active > a,
+.nav-tabs-justified > .active > a:hover,
+.nav-tabs-justified > .active > a:focus,
+.pagination > li > a,
+.pagination > li > span  ,
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus,
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus,
+.pager li > a,
+.pager li > span  ,
+.thumbnail  ,
+.panel-footer,
+.panel-default ,
+.panel-default > .panel-heading,
+.well blockquote,
+.list-group-item,
+.jumbotron,
+.region-sidebar-first>section.block,
+.region-sidebar-second>section.block,
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+  border-color: #8da4f5;
+}
+.mbc-link-border-left,
+blockquote {
+  border-left-color: #8da4f5;
+}
+.mbc-link-border-right {
+  border-right-color: #8da4f5;
+}
+.mbc-link-border-top {
+  border-top-color: #8da4f5;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td,
+.table > tbody + tbody ,
+.panel > .panel-body + .table,
+.panel > .panel-body + .table-responsive,
+.panel > .table + .panel-body,
+.panel > .table-responsive + .panel-body,
+.panel-group .panel-heading + .panel-collapse > .panel-body,
+.panel-group .panel-heading + .panel-collapse > .list-group,
+.panel-default > .panel-heading + .panel-collapse > .panel-body ,
+.list-group-item,
+hr {
+  border-top-color: #8da4f5;
+}
+.mbc-link-border-bottom {
+  border-bottom-color: #8da4f5;
+}
+.nav-tabs,
+.panel-group .panel-footer + .panel-collapse .panel-body,
+.panel-default > .panel-footer + .panel-collapse > .panel-body,
+.table > thead > tr > th,
+.page-header {
+  border-bottom-color: #8da4f5;
+}
+
+.mbc-link-outline-color {
+  outline-color: #8da4f5;
+}
+.mbc-link-column-rule-color {
+  -webkit-column-rule-color: #8da4f5;
+  -moz-column-rule-color: #8da4f5;
+  column-rule-color: #8da4f5;
+}
+
+.mbc-text-color {
+  color: #666666;
+}
+.mbc-text-bg {
+  background-color: #666666;
+}
+.mbc-text-border {
+  border-color: #666666;
+}
+.mbc-text-border-left {
+  border-left-color: #666666;
+}
+.mbc-text-border-right {
+  border-right-color: #666666;
+}
+.mbc-text-border-top {
+  border-top-color: #666666;
+}
+.mbc-text-border-bottom {
+  border-bottom-color: #666666;
+}
+.mbc-text-outline-color {
+  outline-color: #666666;
+}
+.mbc-text-column-rule-color {
+  -webkit-column-rule-color: #666666;
+  -moz-column-rule-color: #666666;
+  column-rule-color: #666666;
+}
+
+.mbc-bg-color,
+.mbc-bg-color-fcl a,
+.btn a,
+.links .btn a,
+.breadcrumb>.active,
+.breadcrumb li:before,
+.breadcrumb li:after,
+.input-group-addon .fa,
+.input-group-addon .icon,
+footer#footer,
+footer#footer a,
+footer#footer a:hover,
+footer#footer a:focus,
+footer#footer h1,
+footer#footer h2,
+footer#footer h3,
+footer#footer h4,
+footer#footer h5,
+footer#footer h6 {
+  color: #f7f8fb !important;
+}
+.mbc-bg-bg,
+body,
+.navbar-toggle .icon-bar,
+.navbar-default .navbar-toggle .icon-bar,
+.home_topcarousel-container .carousel-indicators li.active {
+  background-color: #f7f8fb;
+}
+body,
+.img-thumbnail,
+.table .table,
+.form-control,
+.dropdown-menu,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.navbar-inverse .navbar-toggle .icon-bar,
+.pagination > li > a,
+.pagination > li > span,
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus,
+.pager li > a,
+.pager li > span,
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span,
+.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge,
+.thumbnail,
+.list-group-item,
+.panel,
+.panel-primary > .panel-heading .badge,
+.modal-content,
+.carousel-indicators .active {
+  background-color: #f7f8fb;
+}
+.mbc-bg-border {
+  border-color: #f7f8fb;
+}
+.input-group-addon,
+.navbar-toggle,
+button.navbar-toggle,
+.navbar-default .navbar-toggle,
+.neon-homepage-nodes .user-pic img {
+  border-color: #f7f8fb;
+}
+.mbc-bg-border-left {
+  border-left-color: #f7f8fb;
+}
+.mbc-bg-border-right {
+  border-right-color: #f7f8fb;
+}
+.mbc-bg-border-top {
+  border-top-color: #f7f8fb;
+}
+.mbc-bg-border-bottom {
+  border-bottom-color: #f7f8fb;
+}
+.mbc-bg-outline-color {
+  outline-color: #f7f8fb;
+}
+.mbc-bg-column-rule-color {
+  -webkit-column-rule-color: #f7f8fb;
+  -moz-column-rule-color: #f7f8fb;
+  column-rule-color: #f7f8fb;
+}

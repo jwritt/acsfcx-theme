@@ -1,0 +1,14 @@
+<div class = "raised">
+<div class="row text-center top-header">
+  <h2 class="title">About Neon</h2>
+</div>
+<div class="row desc">
+  <div class="col-xs-12">
+    <p>Neon (Greek&nbsp;<i>νέον</i>&nbsp;(<i>néon</i>), neuter singular form of νέος meaning "new"), was discovered in 1898 by the British chemists Sir&nbsp;<a href="https://en.wikipedia.org/wiki/William_Ramsay" title="William Ramsay">William Ramsay</a>&nbsp;(1852–1916) and&nbsp;<a href="https://en.wikipedia.org/wiki/Morris_W._Travers" title="Morris W. Travers">Morris W. Travers</a>&nbsp;(1872–1961) in&nbsp;<a href="https://en.wikipedia.org/wiki/London" title="London">London</a>.<sup id="cite_ref-12"><a href="https://en.wikipedia.org/wiki/Neon#cite_note-12">[12]</a></sup>&nbsp;Neon was discovered when Ramsay chilled a sample of air until it became a liquid, then warmed the liquid and captured the gases as they boiled off. The gases&nbsp;<a href="https://en.wikipedia.org/wiki/Nitrogen" title="Nitrogen">nitrogen</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Oxygen" title="Oxygen">oxygen</a>, and&nbsp;<a href="https://en.wikipedia.org/wiki/Argon" title="Argon">argon</a>&nbsp;had been identified, but the remaining gases were isolated in roughly their order of abundance, in a six-week period beginning at the end of May 1898. First to be identified was&nbsp;<a href="https://en.wikipedia.org/wiki/Krypton" title="Krypton">krypton</a>. The next, after krypton had been removed, was a gas which gave a brilliant red light under spectroscopic discharge. This gas, identified in June, was named neon, the Greek analogue of "novum", (new), suggested by Ramsay's son.<sup id="cite_ref-13"><a href="https://en.wikipedia.org/wiki/Neon#cite_note-13">[13]</a></sup>&nbsp;The characteristic brilliant red-orange color emitted by gaseous neon when excited electrically was noted immediately; Travers later wrote, "the blaze of crimson light from the tube told its own story and was a sight to dwell upon and never forget."<sup id="cite_ref-14"><a href="https://en.wikipedia.org/wiki/Neon#cite_note-14">[14]</a></sup>&nbsp;A second gas was also reported along with neon, having approximately the same density as argon but with a different spectrum – Ramsay and Travers named it&nbsp;<b>metargon</b>.<sup id="cite_ref-Nobel_15-0"><a href="https://en.wikipedia.org/wiki/Neon#cite_note-Nobel-15">[15]</a></sup><sup id="cite_ref-RamsayTravers1898_16-0"><a href="https://en.wikipedia.org/wiki/Neon#cite_note-RamsayTravers1898-16">[16]</a></sup>"</p>
+    <p>&nbsp;</p>
+    <p class="text-center"><a href="#" class="raised btn btn-md mbc-base-bg mbc-bg-color mbc-base-border">View More</a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+</div>

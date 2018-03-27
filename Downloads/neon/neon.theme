@@ -1,0 +1,199 @@
+<?php
+
+/**
+ * @file
+ * Theme file.
+ *
+ * All preprocessors and theme functions goes here.
+ */
+
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\contact;
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * @see page.html.twig
+ */
+function neon_preprocess_page(&$variables) {
+  $theme = 'neon';
+  // Add content for home page regions.
+  $home_page_regions = array(
+    'home_welcome',
+    'home_topcarousel',
+    'home_about',
+    'bottom_tabbed',
+    'footer',
+    'footer_copyright',
+    'footer_menu',
+  );
+
+  $variables['snippet'] = _mbase_smart_render($home_page_regions, $theme);
+  $variables['navbar_attributes']['class'][] = 'card';
+  $variables['navbar_attributes']['class'][] = 'mbc-bg-color-fcl';
+  $variables['navbar_attributes']['class'][] = 'mbc-base-bg';
+  $variables['primary_nav'] = _neon_get_cached_menu_tree('main');
+
+  $variables['footer_map'] = _mbase_setting('footer_map', 'neon', NULL);
+  $variables['contact_form'] = _mbase_neon_get_contact_form();
+}
+
+/**
+ * Get the contact form to render in footer.
+ */
+function _mbase_neon_get_contact_form() {
+  $default_form = _mbase_setting('contact_form', 'neon', NULL);
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($default_form && trim($default_form) && $default_form != '-' && $moduleHandler->moduleExists('contact')) {
+    $user = \Drupal::currentUser();
+    $permission = 'access site-wide contact form';
+    $contact_form = $default_form;
+    $hasPermission = $user->hasPermission($permission);
+    if ($hasPermission) {
+      $message = \Drupal::entityTypeManager()
+        ->getStorage('contact_message')
+        ->create(array(
+          'contact_form' => $contact_form,
+        ));
+      $form = \Drupal::service('entity.form_builder')->getForm($message);
+      return $form;
+    }
+    return FALSE;
+  }
+  return FALSE;
+}
+
+/**
+ * Get all contact forms avaliable in the site.
+ */
+function _mbase_neon_get_contact_form_list() {
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('contact')) {
+    $contact_forms = array();
+    $config_factory = \Drupal::configFactory();
+    // Iterate on all text formats config entities.
+    foreach ($config_factory->listAll('contact.form.') as $name) {
+      $name = str_replace('contact.form.', '', $name);
+      $contact_forms[$name] = $name;
+    }
+    if (count($contact_forms)) {
+      $contact_forms['-']  = 'None';
+      return $contact_forms;
+    }
+    return FALSE;
+  }
+  return FALSE;
+}
+
+/**
+ * Get all the blocks of given region.
+ */
+function _mbase_neon_get_region($region = 'home_tabbed', $title_option = array(), $content_option = array()) {
+  $blocks = entity_load_multiple_by_properties('block', array('theme' => 'neon', 'region' => $region));
+  uasort($blocks, 'Drupal\block\Entity\Block::sort');
+  $return = array();
+  $weight = 0;
+  foreach ($blocks as $key => $block) {
+    if ($block->access('view')) {
+      $return[$weight]['key'] = $key;
+      $return[$weight]['title'] = $block->label();
+      $return[$weight]['body'] = entity_view($block, 'block');
+      $return[$weight]['weight'] = $weight;
+      $weight++;
+    }
+  }
+  return $return;
+}
+
+/**
+ * Implements hook_preprocess_region().
+ */
+function neon_preprocess_region(&$variables) {
+  if ($variables['region'] == 'home_topcarousel') {
+    $variables['grouped_blocks'] = _mbase_neon_get_region('home_topcarousel');
+  }
+  if ($variables['region'] == 'bottom_tabbed') {
+    $variables['grouped_blocks'] = _mbase_neon_get_region('bottom_tabbed');
+  }
+}
+
+/**
+ * Build the menu tree from menu name.
+ */
+function _neon_get_menu_tree($menu_name = 'main') {
+  $menuTreeParams = new MenuTreeParameters();
+
+  // Get the menu Level.
+  $menu_level = _mbase_setting('menu_level', $theme, NULL);
+
+  $menu_level = 15;
+  $menuTreeParams->setMaxDepth($menu_level);
+
+  // Get all other menuisting settings.
+  $menu_other_settings = _mbase_setting('menu_other_settings', $theme, NULL);
+  $toggle_desc = TRUE;
+  if ($menu_other_settings['show_description'] == '0') {
+    $toggle_desc = FALSE;
+  }
+  $hide_orphan_tree = TRUE;
+  if ($menu_other_settings['hide_orphan_tree'] == '0') {
+    $hide_orphan_tree = FALSE;
+  }
+
+  $menu = \Drupal::menuTree()->load($menu_name, $menuTreeParams);
+  $data = \Drupal::menuTree()->build($menu);
+  _neon_menu_add_desc($data['#items'], $toggle_desc, FALSE);
+
+  $data['#attributes']['contentmenu'] = FALSE;
+
+  return $data;
+}
+
+/**
+ * Cache the _neonc_get_menu_tree data, for performance.
+ */
+function _neon_get_cached_menu_tree($menu_name) {
+  $cid = 'neonmenu' . $menu_name . ':';
+
+  $data = NULL;
+  if ($cache = \Drupal::cache()->get($cid)) {
+    $data = $cache->data;
+  }
+  else {
+    $data = _neon_get_menu_tree($menu_name);
+    \Drupal::cache()->set($cid, $data);
+  }
+  return $data;
+}
+
+/**
+ * Alter the Menu tree array, add few stuffs.
+ */
+function _neon_menu_add_desc(&$items, $show_desc = 1, $hide_orphan = 1, $isparent = 1) {
+  foreach ($items as $key => &$item) {
+    if ($hide_orphan && !$item['original_link']->hasChildren && count($item['below']) == 0 && $isparent) {
+      unset($items[$key]);
+      continue;
+    }
+    $item['weight'] = $item['original_link']->getWeight();
+    $desc = $item['original_link']->getDescription();
+    if ($show_desc) {
+      $item['descrip'] = $desc ? $desc : FALSE;
+    }
+    $item['menulink'] = $item['original_link']->getUrlObject()->toString();
+    if (count($item['below'])) {
+      _neon_menu_add_desc($item['below'], $show_desc, $hide_orphan, 0);
+      uasort($item['below'], "_neon_weight_cmp");
+    }
+  }
+}
+
+/**
+ * Comparison function for menu sort.
+ */
+function _neon_weight_cmp(&$a, &$b) {
+  if ($a['weight'] == $b['weight']) {
+    return 0;
+  }
+  return ($a['weight'] < $b['weight']) ? -1 : 1;
+}

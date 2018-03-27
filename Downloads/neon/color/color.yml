@@ -1,0 +1,55 @@
+fields:
+  base: Base color
+  text: Text color
+  link: Link
+  background: Background
+schemes:
+  default :
+    title: Default
+    colors:
+      base: '#7693fd'
+      text: '#666666'
+      link: '#a7bafd'
+      background: '#f7f8fb'
+  ticklemepink :
+    title: Tickle me pink
+    colors:
+      base: '#FD7693'
+      text: '#666666'
+      link: '#FDA7BA'
+      background: '#F7F8FB'
+  lightslateblue :
+    title: Light Slate Blue
+    colors:
+      base: '#9376FD'
+      text: '#666666'
+      link: '#BAA7FD'
+      background: '#F7F8FB'
+  vividtangerine :
+    title: Vivid Tangerine
+    colors:
+      base: '#FD9376'
+      text: '#666666'
+      link: '#FDBAA7'
+      background: '#F7F8FB'
+  heliotrope :
+    title: Heliotrope
+    colors:
+      base: '#E076FD'
+      text: '#666666'
+      link: '#EBA7FD'
+      background: '#F7F8FB'
+  cello :
+    title: Cello
+    colors:
+      base: '#34495E'
+      text: '#666666'
+      link: '#7D8A98'
+      background: '#F7F8FB'
+  summersky :
+    title: Summer sky
+    colors:
+      base: '#3498db'
+      text: '#666666'
+      link: '#7DBDE8'
+      background: '#F7F8FB'

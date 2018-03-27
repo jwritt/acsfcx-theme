@@ -1,0 +1,40 @@
+name: Neon
+type: theme
+base theme: mbase
+description: 'Neon is clean general purpose Sub-theme for <a href = "https://www.drupal.org/project/mbase" target = "_blank"> mbase</a> template. It is partially generated using <a href = "http://cmsbots.com" target = "_blank">cmsbots.com</a>'
+package: CMSbots
+libraries:
+  - neon/global-styling
+
+# version: VERSION
+# core: 8.x
+
+regions:
+  home_welcome: Homepage Welcome
+  home_topcarousel: Home Top Carousel
+  home_about: Home About
+  branding: Branding
+  navigation: Navigation
+  header: Header
+  highlighted: Highlignted
+  help: Help
+  content: Main Content
+  sidebar_first: Sidebar First
+  sidebar_second: Sidebar Second
+  page_top: Page Top
+  page_bottom: Page Bottom
+  bottom_tabbed: Bottom Tabbed Region
+  footer: Footer
+  footer_copyright: Footer Copyright
+  footer_menu: Footer Menu
+# version: 8.x-3.x-dev
+# core: 8.x
+# project: neon
+# datestamp: 1434064033
+
+
+# Information added by Drupal.org packaging script on 2016-11-29
+version: '8.x-1.0'
+core: '8.x'
+project: 'neon'
+datestamp: 1480437786
