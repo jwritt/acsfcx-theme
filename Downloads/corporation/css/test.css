@@ -1,0 +1,44 @@
+body {
+  background-repeat: repeat;
+  font-family: "Open Sans";
+}
+body #color a {
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+body #color a:hover {
+  text-decoration: none;
+}
+#main-navbar-collapse li a {
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+#main-navbar-collapse li a:hover {
+  text-decoration: none;
+}
+#footer a {
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+#footer a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Open Sans" !important;
+}
+h2 {
+  font-family: "Open Sans" !important;
+}
+h3 {
+  font-family: "Open Sans" !important;
+}
+h4 {
+  font-family: "Open Sans" !important;
+}
+h5 {
+  font-family: "Open Sans" !important;
+}
+h6 {
+  font-family: "Open Sans" !important;
+}
